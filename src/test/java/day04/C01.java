@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.List;
+
 public class C01 {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "src/resources/drivers/chromedriver.exe");
@@ -21,16 +23,24 @@ public class C01 {
             a++;
         }
         // 3- Add Element butonuna 10 kez basıldığını test ediniz
-
+        List<WebElement> deleteButonListesi = driver.findElements(By.xpath("//*[text()='Delete'"));
+        int beklenenDeleteButonSayisi = 10;
+        int olanDeleteButonSayisi = deleteButonListesi.size();
+        if (olanDeleteButonSayisi == beklenenDeleteButonSayisi) {
+            System.out.println("PASSED");
+        } else System.out.println("FAILED");
         // 4- Delete butonuna görünmeyene kadar basınız
-        WebElement deleteButonu = driver.findElement(By.xpath("//button[@class='added-manually']"));
-        int b = 1;
-        while (b <= 10) {
-            deleteButonu.click();
-            b++;
+        for (int i = 0; i < 10; i++) {
+            driver.findElement(By.xpath("(//*[text()='Delete')[1]"));
         }
         // 5- Delete butonunun görünmediğini test ediniz
+        WebElement anaSayfa = driver.findElement(By.className("no-js"));
+        String deleteButonu = "Delete";
+        if (!anaSayfa.getText().contains(deleteButonu)){
+            System.out.println("TEST PASSED");
+        } else System.out.println("TEST FAILED");
         // 6- Sayfayı kapatın
 
+        driver.close();
     }
 }

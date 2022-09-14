@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class C04_WebElementsMethodlari {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         System.setProperty("webdriver.chrome.driver", "src/resources/drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
@@ -29,7 +29,7 @@ public class C04_WebElementsMethodlari {
 
         //b. Search(ara) “city bike”
         WebElement aramaKutusu = driver.findElement(By.id("twotabsearchtextbox"));
-        aramaKutusu.sendKeys("city bike", Keys.ENTER);
+        aramaKutusu.sendKeys("city bike" + Keys.ENTER);
 
         //c. Amazon'da görüntülenen ilgili sonuçların sayısını yazdırın
         List<WebElement> aramaSonucu = driver.findElements(By.className("sg-col-inner"));
@@ -48,6 +48,6 @@ public class C04_WebElementsMethodlari {
         ilkResim.get(0).click();
 
         // Sayfayı kapatın
-        driver.quit();
+       // driver.quit();
     }
 }

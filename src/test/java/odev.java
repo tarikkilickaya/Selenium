@@ -1,6 +1,8 @@
 public class odev {
     /*
-    1-C01_TekrarTesti isimli bir class olusturun  2- https://www.amazon.com/ adresine gidin  3- Browseri tam sayfa yapin
+    1-C01_TekrarTesti isimli bir class olusturun
+    2- https://www.amazon.com/ adresine gidin
+    3- Browseri tam sayfa yapin
 Sayfayi “refresh” yapin
 Sayfa basliginin “Spend less” ifadesi icerdigini test edin
 Gift Cards sekmesine basin
