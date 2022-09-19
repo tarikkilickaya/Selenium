@@ -48,6 +48,6 @@ public class C04_WebElementsMethodlari {
         ilkResim.get(0).click();
 
         // Sayfayı kapatın
-       // driver.quit();
+        driver.quit();
     }
 }

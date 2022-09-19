@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.sql.SQLOutput;
 import java.util.List;
 
 
@@ -18,6 +19,9 @@ public class C06_findElements {
         // Amazon sayfasındaki tagları a olanların sayısını yazdırınız
         List<WebElement> tag = driver.findElements(By.tagName("a"));
         System.out.println("a tagının sayısı : " + tag.size());
-        driver.quit();
+        //driver.quit();
+
+        WebElement kulaklikYazisi = driver.findElement(By.xpath("(//*[@class='a-size-small a-color-base truncate-2line'])[1]"));
+        System.out.println(kulaklikYazisi.getText());
     }
 }
